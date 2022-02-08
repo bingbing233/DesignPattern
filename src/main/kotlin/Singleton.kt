@@ -78,3 +78,8 @@ class Singleton4 {
         }
     }
 }
+
+/**
+ * kotlin的单例
+ */
+object Singleton5
