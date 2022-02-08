@@ -60,6 +60,12 @@ class Singleton3 {
  * 缺点：代码比较多
  *
  * volatile:避免jvm的指令重排序
+ * jvm创建一个对象有四个步骤
+ * 1、申请内存空间，
+ * 2、初始化默认值（区别于构造器方法的初始化），
+ * 3、执行构造器方法
+ * 4、连接引用和实例。
+ * 使用volatile避免这四个步骤重排序，造成未初始化完全的对象发布
  */
 class Singleton4 {
     companion object {
