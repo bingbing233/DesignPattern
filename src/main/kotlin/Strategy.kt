@@ -93,7 +93,7 @@ fun main(){
     val flyWithNoWay = FlyWithNoWay()
     val quack = Quack()
     val squeak = Squeak()
-
+//想要实现鸭子不同的行为，只需要在创建对象时传入不同的行为实现类即可，具有很好的扩展性
     val mallardDuck:Duck = MallardDuck(quack,flyWithWings)
     val rubberDuck:Duck = RubberDuck(squeak,flyWithNoWay)
 
@@ -104,4 +104,26 @@ fun main(){
     rubberDuck.fly()
     rubberDuck.quack()
 }
+
+//如果不使用策略模式该怎么写？
+// 方法写死，不易于扩展，违反开闭原则
+/*class MallardDuck: Duck() {
+    override fun fly() {
+        println("I can fly with wings")
+    }
+
+    override fun quack() {
+        println("quack")
+    }
+}
+
+class RubberDuck:Duck(){
+    override fun fly() {
+        println("I can not fly")
+    }
+
+    override fun quack() {
+        println("squeak")
+    }
+}*/
 
