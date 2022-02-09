@@ -1,3 +1,6 @@
+import java.util.*
+import kotlin.collections.ArrayList
+
 /**
  * 适配器模式
  * 定义：将一个类的接口，转换成客户期望的另一个接口，适配器让原来不兼容的类可以合作无间
@@ -63,4 +66,15 @@ fun main(){
     val turkeyAdapter = TurkeyAdapter(turkey)
         birds.add(turkeyAdapter)
 }
+
+/**
+ *jdk中集合类都使用适配器模式
+ * list、map、set等类都实现了一个为Iterator的接口
+ * interface Iterator{
+ *      hasNext()
+ *      next()
+ *      remove()
+ * }
+ * 每个集合类都实现了自己的遍历方法
+ */
 
